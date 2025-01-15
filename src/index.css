@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection{
+    background: #DE1212;
+    color: white;  
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #181818; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #DE1212; /* Color of the scrollbar thumb */
+}
+
+
+@font-face {
+    font-family: regular;
+    src: url(/src/assets/fonts/regular.woff2);
+}
+@font-face {
+    font-family: semibold;
+    src: url(/src/assets/fonts/semibold.woff2);
+}
+@font-face {
+    font-family: bold;
+    src: url(/src/assets/fonts/bold.woff2);
+}
+
+  body {
+    background: #333333;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+
+  
