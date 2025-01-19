@@ -17,9 +17,9 @@ const MostPopular = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("https://lazycodwr.github.io/api/db.json");
+        const res = await fetch("http://localhost:3000/movies");
         const result = await res.json();
-        setData(result.movies);
+        setData(result);
       } catch (error) {
         console.error(error);
       }

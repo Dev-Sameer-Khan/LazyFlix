@@ -18,10 +18,10 @@ const Slide = () => {
     const fetchData = async () => {
       try {
         // The API URL was incorrect - removing /movies from the end
-        const res = await fetch("https://lazycodwr.github.io/api/db.json");
+        const res = await fetch("http://localhost:3000/movies");
         const result = await res.json();
         // Access the movies array from the response
-        setData(result.movies);
+        setData(result);
       } catch (error) {
         console.error("Error fetching data:", error);
       }

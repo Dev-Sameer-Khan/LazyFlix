@@ -25,9 +25,9 @@ const Navbar = () => {
   const fetchMovies = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://lazycodwr.github.io/api/db.json');
+      const response = await fetch('http://localhost:3000/movies');
       const data = await response.json();
-      setMovies(data.movies); // Store all movies
+      setMovies(data); // Store all movies
       setLoading(false);
     } catch (error) {
       console.error("Error fetching movies:", error);

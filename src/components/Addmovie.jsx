@@ -28,9 +28,9 @@ const Addmovie = () => {
         useEffect(() => {
           const fetchData = async () => {
             try {
-              const res = await fetch("https://lazycodwr.github.io/api/db.json");
+              const res = await fetch("http://localhost:3000/movies");
               const result = await res.json(data);
-              setData(result.movies);
+              setData(result);
             } catch (error) {
               console.error(error);
             }
@@ -47,7 +47,7 @@ const Addmovie = () => {
           const MovieData = {movieName, releaseYear, rating, length, views, directorName, genre, cast, bannerBig, bannerSmall, category, description, watchLink, trailerLink, type, showType};
 
           try {
-            const response = await fetch('https://lazycodwr.github.io/api/db.json', {
+            const response = await fetch('http://localhost:3000/movies', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
