@@ -75,7 +75,6 @@ const Movies = () => {
         <div className="absolute w-full h-44 top-0 left-0 bg-gradient-to-t from-transparent to-[#181818]/50"></div>
         <div className="absolute w-full h-screen bottom-0 left-0 bg-gradient-to-b from-transparent to-[#181818]"></div>
         <img className="w-full h-full object-top object-cover" src={movie.bannerBig} alt="" />
-        <iframe className="absolute top-[20%] left-[3%] w-[95%] h-[90%]" src={movie.trailerLink} title={movie.movieName} frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrer-policy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
       <div className="w-[80%] max-[599px]:w-full h-full flex items-start justify-center flex-col p-12 max-[599px]:p-8 max-[599px]:pt-14 text-[#818083] font-[bold]">
          <h1 className="text-4xl max-[599px]:text-[7.5vw] text-white">{movie.movieName}</h1>

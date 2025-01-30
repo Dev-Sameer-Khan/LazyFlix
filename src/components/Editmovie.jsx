@@ -22,7 +22,6 @@ const Editmovie = () => {
       const [watchLink, setWatchLink] = useState("");
       const [type, setType] = useState("");
       const [showType, setShowType] = useState("");
-      const [trailerLink, setTrailerLink] = useState("");
       
         // Fetch data when the component mounts
         useEffect(() => {
