@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import logo from '../assets/images/BollyFlix.svg';
+import logo from '../assets/images/logo.svg';
 import { FaSearch } from "react-icons/fa";
 import { Link, NavLink, useNavigate, useParams } from 'react-router-dom';
 import { IoClose } from "react-icons/io5";
@@ -102,7 +102,7 @@ const Navbar = () => {
       <div className="left max-[599px]:w-[72%] flex items-center justify-between max-[599px]:justify-end gap-10">
         <RiMenu2Line onClick={showmenu} id='show' className='absolute top-8.5 left-5 cursor-pointer hidden max-[599px]:block' color='white' size={30} />
         <div className="logo">
-          <NavLink to="/"><img src={logo} alt="Logo" /></NavLink>
+          <NavLink to="/"><img src={logo} className='h-[4.5vw] bg-cover' alt="Logo" /></NavLink>
         </div>
         <ul className='flex items-center justify-center gap-6 text-white font-[semibold] max-[599px]:hidden'>
           <NavLink to="/bollywood"><li className='text-[1.2vw]'>Bollywood</li></NavLink>

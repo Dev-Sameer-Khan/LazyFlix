@@ -62,7 +62,7 @@ const MostPopular = () => {
     <><section className='w-full h-1/2 my-10 max-[599px]:my-7 text-[#818083] px-10 max-[599px]:px-4'>
         <div className="top-txt w-full h-fit flex items-center justify-center flex-col py-6 ">
         <h3 className='font-[bold] text-[1.75vw] pb-4 max-[599px]:text-[6vw] max-[599px]:text-center max-[599px]:leading-none'>LAZYFLIX – Discover All The Latest Bollywood, Hollywood, South Indian & Punjabi Movies</h3>
-        <p className='font-[regular] text-center leading-relaxed'>LazyFlix is here with its extensive collection of all the top-rated Bollywood blockbusters and Hollywood hits. Have the ultimate entertainment with Bollyflix South Indian and Punjabi films. From the action-packed thriller to heart-warming love stories to suspenseful dramas; there is a film for every taste. Explore the vast library to find your next favorite movie.</p>
+        <p className='font-[regular] text-center leading-relaxed'>LazyFlix is here with its extensive collection of all the top-rated Bollywood blockbusters and Hollywood hits. Have the ultimate entertainment with Lazyflix South Indian and Punjabi films. From the action-packed thriller to heart-warming love stories to suspenseful dramas; there is a film for every taste. Explore the vast library to find your next favorite movie.</p>
         </div>
         <div className="btm h-full w-full ">
         <div className='.txt flex items-center justify-start gap-2 mb-6'>

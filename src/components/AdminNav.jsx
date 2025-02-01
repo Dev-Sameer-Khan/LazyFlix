@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import logo from '../assets/images/BollyFlix.svg'
+import logo from '../assets/images/logo.svg'
 import { Link, NavLink } from 'react-router-dom'
 import { IoClose } from 'react-icons/io5'
 import { RiMenu2Line } from 'react-icons/ri'
@@ -49,7 +49,7 @@ const AdminNav = () => {
     <nav className='w-full fixed top-0 left-0 backdrop-blur-sm bg-[#333]/50 z-[999] px-12 max-[599px]:px-4 py-5 flex items-center justify-between'>
         <div className="left flex items-center gap-4">
           <div className="logo">
-            <NavLink to="/admin"><img src={logo} alt="" /></NavLink>
+            <NavLink to="/admin"><img src={logo} className='h-[4.5vw] object-cover' alt="" /></NavLink>
           </div>
         </div>
         <div className="menu flex items-start justify-between gap-10 text-[1.2vw] font-[semibold] max-[599px]:hidden">

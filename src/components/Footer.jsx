@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/images/BollyFlix.svg'
+import logo from '../assets/images/logo.svg'
 import { Link ,NavLink } from 'react-router-dom'
 
 const Footer = () => {
