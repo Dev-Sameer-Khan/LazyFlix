@@ -17,11 +17,11 @@ const Slide = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // The API URL was incorrect - removing /movies from the end
-        const res = await fetch("http://localhost:3000/movies");
+        const res = await fetch("/api/movies");
         const result = await res.json();
-        // Access the movies array from the response
-        setData(result);
+        console.log(result.movies);
+        // Set the result directly to data state
+        setData(result.movies);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -54,7 +54,7 @@ const Slide = () => {
       className="mySwiper"
     >
 
-      {data && data.slice(0 ,5).map((movie, index) => (
+      {data && data.slice(0,5).map((movie, index) => (
         <SwiperSlide key={index}>
           <div className="w-full h-[85vh] max-[599px]:h-[80vh] relative flex items-center justify-between">
             {/* Top Gradient */}
@@ -68,7 +68,7 @@ const Slide = () => {
               alt={movie.movieName}
             />
             {/* Movie Details */}
-          <div className="w-1/2 max-[599px]:w-full h-full absolute flex items-start justify-center flex-col px-12 max-[599px]:px-4 text-[#fff] font-[bold] pt-8 max-[599px]:pt-12">
+            <div className="w-1/2 max-[599px]:w-full h-full absolute flex items-start justify-center flex-col px-12 max-[599px]:px-4 text-[#fff] font-[bold] pt-8 max-[599px]:pt-12">
               <h1 className="text-3xl max-[599px]:text-[8vw]">{movie.movieName}</h1>
               <div className="flex items-center justify-between gap-2 text-[0.85vw] max-[599px]:text-[3.5vw] py-3">
                 <span className="flex items-center justify-center">
@@ -89,7 +89,7 @@ const Slide = () => {
               <p className="font-[regular] text-[1.2vw] max-[599px]:text-[4vw] mt-4">Director: {movie.directorName}</p>
               <p className="font-[regular] text-[1.2vw] max-[599px]:text-[4vw]">Genre: {movie.genre}</p>
               <p className="font-[regular] text-[1.2vw] max-[599px]:text-[4vw] text-left">Cast: {movie.cast}</p>
-              <button onClick={(name)=>handlemovie(movie.movieName)} className="flex items-center justify-center gap-2 bg-[#DE1212] py-2 px-4 rounded-md mt-4 text-[1.2vw] max-[599px]:text-[4vw]">
+              <button onClick={() => handlemovie(movie.movieName)} className="flex items-center justify-center gap-2 bg-[#DE1212] py-2 px-4 rounded-md mt-4 text-[1.2vw] max-[599px]:text-[4vw]">
                 <FaRegCirclePlay />
                 WATCH NOW
               </button>

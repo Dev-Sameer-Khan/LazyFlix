@@ -20,11 +20,9 @@ const BollywoodPage = () => {
           return console.log('No data found');
         }
 
-        console.log('res hu main', res.data);
+        const result = await res.json(data);
 
-        let data = Object.values(res.data); // Convert JSON data into an array
-
-        setData(data);
+        setData(result.movies);
 
         console.log('data hu main', data.length);
       } catch (error) {

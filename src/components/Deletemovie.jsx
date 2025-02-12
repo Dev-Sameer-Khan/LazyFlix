@@ -9,9 +9,9 @@ const Deletemovie = () => {
         useEffect(() => {
           const fetchData = async () => {
             try {
-              const res = await fetch("http://localhost:3000/movies");
+              const res = await fetch("/api/movies");
               const result = await res.json();
-              setData(result);
+              setData(result.movies);
             } catch (error) {
               console.error(error);
             }
@@ -21,7 +21,7 @@ const Deletemovie = () => {
         }, [data]);
 
         const handleDelete = async (userId) => {
-          const response = await fetch(`http://localhost:3000/movies/${userId}`, { method: 'DELETE' });
+          const response = await fetch(`/api/movies${userId}`, { method: 'DELETE' });
           if (response.ok) {
             setUsers(data.filter(user => user.id !== userId));
           } else {

@@ -25,9 +25,9 @@ const Navbar = () => {
   const fetchMovies = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3000/movies');
+      const response = await fetch('/api/movies');
       const data = await response.json();
-      setMovies(data); // Store all movies
+      setMovies(data.movies); // Store all movies
       setLoading(false);
     } catch (error) {
       console.error("Error fetching movies:", error);

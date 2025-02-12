@@ -17,9 +17,9 @@ const MostPopular = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/movies");
+        const res = await fetch("/api/movies");
         const result = await res.json();
-        setData(result);
+        setData(result.movies);
       } catch (error) {
         console.error(error);
       }
