@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './components/Navbar'
 
 import Footer from './components/Footer'
 
 import Landing from './pages/Landing'
 import { Helmet } from 'react-helmet-async'
+import socket from './config/socket/socket.config'
+
+
 
 const App = () => {
+
+  useEffect(() => {
+    // Connect to the server
+    socket.connect();
+
+    // Listen for events
+    socket.on("connect", () => {
+      console.log("Connected to server");
+    });
+
+ 
+  }, []);
+
+
   return (
     <main className='bg-[#181818]'>
       <Helmet>
